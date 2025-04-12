@@ -1,0 +1,32 @@
+<div class="serviceBox">
+    <div class="service-icon">
+      <i class="fa fa-female" aria-hidden="true"></i>
+    </div>
+    <h3 class="title">Age</h3>
+    <p class="description">
+      Your current age in years.
+      <br><br>
+    </p>
+    
+    <!-- Hidden paragraph initially -->
+    <p class="more-text" style="display: none;">
+      Age is an essential factor in assessing health risks, as certain conditions become more common as we age.
+    </p>
+  
+    <!-- Read More button -->
+    <a href="javascript:void(0);" class="new-btn-d br-2" onclick="toggleMore(this)">Read More</a>
+  </div>
+  
+  <script>
+    function toggleMore(btn) {
+      const moreText = btn.previousElementSibling;
+      if (moreText.style.display === "none") {
+        moreText.style.display = "block";
+        btn.textContent = "Read Less";
+      } else {
+        moreText.style.display = "none";
+        btn.textContent = "Read More";
+      }
+    }
+  </script>
+  
